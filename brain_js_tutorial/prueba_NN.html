@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>prueba NN</title>
+	<script type="text/javascript" src= "brain-0.6.3.min.js"></script>
+</head>
+
+<body>
+
+	<script type="text/javascript">
+
+		//////XOR function
+		var net = new brain.NeuralNetwork();
+
+		net.train([{input: [0, 0], output: [0]},
+		           {input: [0, 1], output: [1]},
+		           {input: [1, 0], output: [1]},
+		           {input: [1, 1], output: [0]}]);
+
+		var output = net.run([1, 0]);  // [0.987]
+
+		console.log(output);
+	</script>
+
+</body>
+</html>
